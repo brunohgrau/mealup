@@ -4,8 +4,8 @@ import { lightTheme, darkTheme } from "./styles/theme";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { AppRoutes } from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Badge } from "./components/Badge";
 import { truncate } from "fs/promises";
+import { Review } from "./components/Review/Review";
 
 function App() {
   const theme = lightTheme;
@@ -15,7 +15,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
-        <Badge text="Truncate" />
+        <Review rating={4} />
       </ThemeProvider>
     </Router>
   );
