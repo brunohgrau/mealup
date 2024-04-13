@@ -4,29 +4,17 @@ import { lightTheme, darkTheme } from "./styles/theme";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { AppRoutes } from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Icon } from "./components/Icon/Icon";
-import { Button } from "./components/Button/Button";
+import { IconButton } from "./components/IconButton";
 
 function App() {
   const theme = lightTheme;
+
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
-        <Button
-          aria-label="food cart"
-          icon="cart"
-          onClick={() => {}}
-          clear={false}
-          large={false}
-          round={false}
-          withIcon={false}
-        >
-          Button
-        </Button>
-
-        <h1>Hello</h1>
+        <IconButton name="arrow-left" small={false} />
       </ThemeProvider>
     </Router>
   );
