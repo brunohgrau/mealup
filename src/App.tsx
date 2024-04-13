@@ -5,7 +5,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { AppRoutes } from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import { truncate } from "fs/promises";
-import { ErrorBlock } from "./components/ErrorBlock/ErrorBlock";
+import { RestaurantCard } from "./components/RestaurantCard";
 
 function App() {
   const theme = lightTheme;
@@ -15,12 +15,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
-        <ErrorBlock
-          body="It seems that there are no restaurants in this category yet. Try to come back later?"
-          title="This is not the food you’re looking for."
-          image={<img alt="no restaurants found" src={""} />}
-          buttonText="See all restaurants"
-          onButtonClick={() => {}}
+        <RestaurantCard
+          name="Sushi"
+          specialty="Japanese"
+          rating={4.5}
+          isNew
+          isClosed
+          categories={["Japanese", "Sushi"]}
+          onClick={() => {}}
+          photoUrl="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1003&q=20"
         />
       </ThemeProvider>
     </Router>
