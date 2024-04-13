@@ -6,9 +6,9 @@ type FontSize = "body" | "bodyS" | "bodyXS" | "bodyXXS";
 type FontWeight = "regular" | "medium" | "bold" | "black";
 
 const BodyBase = styled.p<{
-  size: string;
-  fontWeight: string;
-  as: "span" | "p" | "label" | "figcaption";
+  size?: string;
+  fontWeight?: string;
+  as?: "span" | "p" | "label" | "figcaption";
 }>(
   ({ size, fontWeight, color: textColor, theme: { typography, color } }) => css`
     display: block;
@@ -25,7 +25,7 @@ type DefaultProps = {
   fontWeight?: "regular" | "medium" | "bold" | "black";
   type?: "span" | "p" | "label" | "figcaption";
   color?: string;
-  children: React.ReactNode | string;
+  children?: React.ReactNode | string;
 };
 
 type BodyProps = DefaultProps & React.ComponentProps<typeof BodyBase>;

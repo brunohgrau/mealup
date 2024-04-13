@@ -9,10 +9,10 @@ const Spacer = styled.span`
 `;
 
 const StyledButton = styled.button<{
-  clear: boolean;
-  large: boolean;
-  withIcon: boolean;
-  round: boolean;
+  clear?: boolean;
+  large?: boolean;
+  withIcon?: boolean;
+  round?: boolean;
 }>(
   ({
     clear,
