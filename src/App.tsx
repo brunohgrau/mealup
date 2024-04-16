@@ -5,7 +5,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { AppRoutes } from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import { truncate } from "fs/promises";
-import { FooterCard } from "./components/FooterCard";
+import { Select } from "./components/forms/Select";
 
 function App() {
   const theme = lightTheme;
@@ -15,6 +15,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
+        <Select value={2} onChange={() => {}} options={[...Array(11).keys()]} />
       </ThemeProvider>
     </Router>
   );

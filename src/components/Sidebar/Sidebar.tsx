@@ -52,11 +52,12 @@ export const Sidebar: React.FC<React.PropsWithChildren<SidebarProps>> = ({
               icon="cross"
               iconSize={16}
             />
-            <SidebarContent data-testid="sidebar-content">
-              {children}
-            </SidebarContent>
-            {footer && <SidebarFooter>{footer}</SidebarFooter>}
           </TopBar>
+
+          <SidebarContent data-testid="sidebar-content">
+            {children}
+          </SidebarContent>
+          {footer && <SidebarFooter>{footer}</SidebarFooter>}
         </SidebarContainer>
       </CSSTransition>
       <CSSTransition
