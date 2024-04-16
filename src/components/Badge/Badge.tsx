@@ -3,10 +3,11 @@ import { Body } from "../typography";
 
 const Container = styled.div(
   ({ theme: { color, borderRadius } }) => css`
+    display: inline-block;
     padding: 3px 8px;
     background: ${color.badgeBackground};
     border-radius: ${borderRadius.xs};
-    display: inline-block;
+
     text-transform: capitalize;
     span {
       color: ${color.badgeText};

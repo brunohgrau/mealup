@@ -4,26 +4,7 @@ import styled, { css } from "styled-components";
 import { Button } from "../Button/Button";
 import { Body } from "../typography/Body";
 import { Heading } from "../typography/Heading";
-
-const ErrorContainer = styled.div(
-  ({ theme: { spacing } }) => css`
-    margin: 0 auto;
-    padding: ${spacing.l} 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  `
-);
-
-const ImageContainer = styled.div(
-  ({ theme: { spacing } }) => css`
-    text-align: center;
-    margin-top: ${spacing.m};
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  `
-);
+import { ErrorContainer, ImageContainer } from "./ErrorBlock.styles";
 
 type ErrorBlockProps = {
   title: string;
