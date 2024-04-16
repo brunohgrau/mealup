@@ -73,7 +73,7 @@ const FloatingTitle = styled.figcaption(
     top: 1.5rem;
     left: 1.5rem;
     border-radius: ${borderRadius.s};
-    background: #202020;
+    background: white;
     padding: 8px 16px;
     text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
     span {
@@ -99,7 +99,7 @@ const Squared = ({ title, photoUrl: url }: CategoryProps) => (
   <>
     <Image src={url} alt="restaurant category" />
     <FloatingTitle>
-      <Body type="span" fontWeight="medium">
+      <Body type="span" fontWeight="medium" size="XXS">
         {title}
       </Body>
     </FloatingTitle>
