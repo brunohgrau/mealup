@@ -5,7 +5,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { AppRoutes } from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import { truncate } from "fs/promises";
-import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 
 function App() {
   const theme = lightTheme;
@@ -15,7 +15,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
-        <Footer />
+        <Header sticky={true} />
       </ThemeProvider>
     </Router>
   );
