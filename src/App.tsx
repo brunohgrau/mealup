@@ -6,6 +6,8 @@ import { AppRoutes } from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import { truncate } from "fs/promises";
 import { PageSection } from "./components/PageSection";
+import { cartItems } from "./stub/cart-items";
+import { OrderSummary } from "./components/ShoppingCart";
 
 function App() {
   const theme = lightTheme;
@@ -15,9 +17,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
-        <PageSection title="test">
-          <div>test</div>
-        </PageSection>
+        <OrderSummary cartItems={cartItems} />
       </ThemeProvider>
     </Router>
   );

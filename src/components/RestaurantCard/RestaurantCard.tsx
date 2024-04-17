@@ -20,12 +20,12 @@ type RestaurantCardProps = {
 
 const Container = styled.div(
   ({ theme: { borderRadius } }) => css`
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     border-radius: ${borderRadius.s};
     width: 100%;
     max-width: 500px;
+    cursor: pointer;
     &:hover {
       opacity: 0.9;
     }
