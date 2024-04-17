@@ -17,7 +17,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <AppRoutes />
-        <OrderSummary cartItems={cartItems} />
       </ThemeProvider>
     </Router>
   );

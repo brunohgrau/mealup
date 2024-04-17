@@ -1,7 +1,4 @@
 import styled from "styled-components";
-
-//import { CartItem } from '../../app-state/cart'
-import { toEuro } from "../../helpers";
 import { Button } from "../Button";
 import { Select } from "../forms/Select";
 import { Sidebar } from "../Sidebar";
@@ -11,7 +8,6 @@ import {
   TotalSection,
   MenuItemContainer,
 } from "./ShoppingCartMenu.styles";
-import { cartItems } from "../../stub/cart-items";
 
 const Footer = ({ onClick, totalPrice }: any) => (
   <FooterContainer>
