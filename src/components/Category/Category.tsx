@@ -1,6 +1,3 @@
-import styled, { css } from "styled-components";
-
-import { breakpoints } from "../../styles/breakpoints";
 import { Body } from "../typography";
 import {
   Container,
