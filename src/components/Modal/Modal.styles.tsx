@@ -41,15 +41,16 @@ const desktopAnimation = css`
 
 export const ModalContent = styled.div(
   ({ theme: { color, borderRadius } }) => css`
-    background-color: ${color.overlayBackground};
-    border-top-left-radius: ${borderRadius.m};
-    border-top-right-radius: ${borderRadius.m};
     position: fixed;
     z-index: 99;
     top: 50%;
     right: 0;
     bottom: 0;
     left: 0;
+    background-color: ${color.overlayBackground};
+    border-top-left-radius: ${borderRadius.m};
+    border-top-right-radius: ${borderRadius.m};
+
     transform-origin: "top center";
     box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
 

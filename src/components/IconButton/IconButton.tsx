@@ -5,15 +5,15 @@ import { Icon } from "../Icon";
 
 const StyledButton = styled.button<{ small: boolean }>(
   ({ small, theme: { borderRadius } }) => css`
-    border: 0;
-    width: ${small ? "3rem" : "4rem"};
-    height: ${small ? "3rem" : "4rem"};
-    border-radius: ${borderRadius.round};
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: ${small ? "3rem" : "4rem"};
+    height: ${small ? "3rem" : "4rem"};
     padding: 14px;
+    border: 0;
+    border-radius: ${borderRadius.round};
+    cursor: pointer;
     color: #333;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
