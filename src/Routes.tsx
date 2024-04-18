@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
+import { RestaurantDetailPage } from "./pages/RestaurantDetailPage";
 
 export const AppRoutes: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
@@ -16,6 +17,8 @@ export const AppRoutes: React.FC<React.PropsWithChildren<unknown>> = ({
       <div id="modal" />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
+
         {children}
       </Routes>
     </>
