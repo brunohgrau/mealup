@@ -15,6 +15,8 @@ export const CategoryDetailPage = () => {
   const photoUrl =
     "https://images.pexels.com/photos/2233351/pexels-photo-2233351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550";
 
+  const navigate = useNavigate();
+
   return (
     <PageTemplate>
       <TopBanner title="Categories" photoUrl={photoUrl} />
@@ -35,6 +37,7 @@ export const CategoryDetailPage = () => {
             specialty="Nicest place for burger"
             rating={4.2}
             categories={["burgers", "comfort food"]}
+            onClick={() => navigate("/restaurants/1")}
           />
           <RestaurantCard
             name="Burger"
@@ -42,6 +45,7 @@ export const CategoryDetailPage = () => {
             specialty="Nicest place for burger"
             rating={4.2}
             categories={["burgers", "comfort food"]}
+            onClick={() => navigate("/restaurants/1")}
           />
         </StyledContainer>
       </div>

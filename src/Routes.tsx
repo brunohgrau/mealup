@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { RestaurantDetailPage } from "./pages/RestaurantDetailPage";
 import { CategoryDetailPage } from "./pages/CategoryDetailPage";
+import { CategoryListPage } from "./pages/CategoryListPage";
 
 export const AppRoutes: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
@@ -20,6 +21,7 @@ export const AppRoutes: React.FC<React.PropsWithChildren<unknown>> = ({
         <Route path="/" element={<HomePage />} />
         <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
         <Route path="/categories/:id" element={<CategoryDetailPage />} />
+        <Route path="/categories" element={<CategoryListPage />} />
 
         {children}
       </Routes>
