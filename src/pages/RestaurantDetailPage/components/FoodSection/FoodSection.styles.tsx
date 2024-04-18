@@ -7,9 +7,9 @@ export const StyledHeading = styled(Heading)`
 `;
 
 export const StyledContainer = styled.div`
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
-  display: grid;
   padding-bottom: 3rem;
 
   @media ${breakpoints.M} {

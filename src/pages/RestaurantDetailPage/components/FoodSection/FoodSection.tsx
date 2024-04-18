@@ -24,6 +24,27 @@ export const FoodSection = memo(
           description={"Description"}
           onClick={() => {}}
         />
+        <FoodItem
+          key={2}
+          name={"Name"}
+          price={20}
+          description={"Description"}
+          onClick={() => {}}
+        />
+        <FoodItem
+          key={2}
+          name={"Name"}
+          price={20}
+          description={"Description"}
+          onClick={() => {}}
+        />
+        <FoodItem
+          key={2}
+          name={"Name"}
+          price={20}
+          description={"Description"}
+          onClick={() => {}}
+        />
       </StyledContainer>
     </div>
   )

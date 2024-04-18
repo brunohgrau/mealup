@@ -33,7 +33,7 @@ type TopBannerProps = {
 export const TopBanner = ({ photoUrl, title, onBackClick }: TopBannerProps) => (
   <Container src={photoUrl}>
     {/* <StyledIconButton onClick={onBackClick} small name="arrow-left" /> */}
-    <StyledHeading level={3} inverted={!!photoUrl}>
+    <StyledHeading level={1} inverted={!!photoUrl}>
       {title}
     </StyledHeading>
   </Container>
