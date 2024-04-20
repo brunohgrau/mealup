@@ -39,3 +39,12 @@ export const BottomContainer = styled.div`
     flex-direction: row;
   }
 `;
+
+export const OrderDetailsContainer = styled.div`
+  width: 100%;
+  margin-bottom: 4rem;
+
+  @media ${breakpoints.M} {
+    width: 420px;
+  }
+`;
