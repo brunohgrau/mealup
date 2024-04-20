@@ -4,6 +4,7 @@ import { HomePage } from "./pages/HomePage";
 import { RestaurantDetailPage } from "./pages/RestaurantDetailPage";
 import { CategoryDetailPage } from "./pages/CategoryDetailPage";
 import { CategoryListPage } from "./pages/CategoryListPage";
+import { CheckoutPage } from "./pages/CheckoutPage";
 
 export const AppRoutes: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
@@ -22,6 +23,7 @@ export const AppRoutes: React.FC<React.PropsWithChildren<unknown>> = ({
         <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
         <Route path="/categories/:id" element={<CategoryDetailPage />} />
         <Route path="/categories" element={<CategoryListPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
 
         {children}
       </Routes>
