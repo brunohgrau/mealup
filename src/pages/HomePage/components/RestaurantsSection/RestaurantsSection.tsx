@@ -9,6 +9,8 @@ import {
   RestaurantCardSkeleton,
 } from "../../../../components/RestaurantCard";
 import { Restaurant } from "../../../../types";
+import { useGetRestaurantsQuery } from "../../../../store/restaurantApiSlice";
+import { isDataView } from "util/types";
 
 const PreviousButton = styled(IconButton)`
   position: absolute;
@@ -21,18 +23,23 @@ const NextButton = styled(IconButton)`
 `;
 
 type RestaurantsSectionProps = {
-  title: string;
-  restaurants?: any;
+  name: string;
+  specialty?: string;
+  restaurant?: any;
 };
 
-export const RestaurantsSection = ({ title }: RestaurantsSectionProps) => {
+export const RestaurantsSection = ({
+  name,
+  restaurant,
+}: RestaurantsSectionProps) => {
   const navigate = useNavigate();
+  const { data: restaurants = [], error, isLoading } = useGetRestaurantsQuery();
 
   // const { restaurants, status } = Restaurants;
 
   const isMobile = /Mobi/i.test(window.navigator.userAgent);
   return (
-    <PageSection title={title}>
+    <PageSection title={name}>
       <Carousel
         draggable={isMobile}
         partialVisible={isMobile}
@@ -59,7 +66,7 @@ export const RestaurantsSection = ({ title }: RestaurantsSectionProps) => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         itemClass="carousel-item"
       >
-        {restaurants?.map((restaurant: Restaurant, index: number) => (
+        {restaurants.map((restaurant: any, index: number) => (
           <RestaurantCard
             key={restaurant.name + index}
             {...restaurant}

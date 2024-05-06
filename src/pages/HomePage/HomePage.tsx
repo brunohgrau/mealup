@@ -14,7 +14,7 @@ export const HomePage = () => (
   <PageTemplate>
     <Banner />
     <Spacing />
-    <RestaurantsSection title="Our favorite Picks" />
+    <RestaurantsSection name="Our favorite Picks" />
     <Spacing />
     <AwardWinningSection />
     <Spacing />
